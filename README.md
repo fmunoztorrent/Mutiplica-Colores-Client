@@ -1,8 +1,7 @@
 # Colors API  
 
 Cliente para listar colores desde una API.
-[URL de API](https://reqres.in/api/colors/)  
-
+[URL de API](https://reqres.in/api/colors/)
 
 URL la PWA funcionando: https://multiplica-prueba-colores.web.app/
 
@@ -16,6 +15,8 @@ URL la PWA funcionando: https://multiplica-prueba-colores.web.app/
 - Sass
 
 ## Instalacion
+
+Dentro de la carpeta **apiColorsClient**, ejecuta:
 
 Para instalar las dependencias, debes tener instalado NPM o algún otro como Yarn.
 ```sh
@@ -38,3 +39,5 @@ Para la compilación ejecuta:
 ng add @angular/pwa 
 ionic build --prod
 ```
+
+Se generará una carpeta **www** que es donde estará el codigo para hacer el despliegue. Esa carpeta es la que tiene la PWA.
