@@ -23,6 +23,11 @@ Para instalar las dependencias, debes tener instalado NPM o algún otro como Yar
 npm install
 ```
 
+Para ejecutar Ionic debes tenerlo instalado:
+```sh 
+npm install -g @ionic/cli
+```
+
 Una vez instalado, para iniciar el entorno de desarrollo, debes ejecutar:
 ```sh
 ionic serve
