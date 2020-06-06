@@ -1,0 +1,72 @@
+<ion-header class="ion-padding-vertical">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      <img src="https://www.multiplicatalent.com/wp-content/themes/multiplica2015/assets/images/logo-talent.png">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+      
+      <ion-col size="12">
+        <h1 class="ion-text-center">Colores</h1>
+        <h5 class="ion-text-center">
+          {{CURRENT_COLORS}}/{{TOTAL_COLORS}} colores
+        </h5>
+      </ion-col>
+
+
+      <ion-col size="12" size-sm="4" *ngFor="let color of colorList">
+        <div>
+          
+          <ion-card class="ion-no-padding">
+            <ion-card-header style="background-color:{{color.color}};">
+              <ion-card-title>
+                <span>{{color.year}}</span>
+              </ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content>
+              <ion-card-title class="ion-text-center">{{color.name}}</ion-card-title>
+              <ion-card-subtitle class="ion-text-center">{{color.color}}</ion-card-subtitle>
+            </ion-card-content>
+
+            <ion-row class="card-footer">
+              <ion-card-subtitle class="ion-text-right">{{color.pantone_value}}</ion-card-subtitle>
+            </ion-row>
+
+          </ion-card>
+
+
+        </div>
+      </ion-col>
+
+
+
+      <ion-col size="12"></ion-col>
+
+      <ion-col id="pagination" size="12" size-sm="4" offset-sm="4" class="ion-text-center">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-button size="small" color="light" (click)="prevPage()">Atrás</ion-button>      
+            </ion-col>
+            <ion-col>
+              {{CURRENT_PAGE}}/{{TOTAL_PAGES}} páginas
+            </ion-col>
+            <ion-col>
+              <ion-button size="small" color="light" (click)="nextPage()">Siguiente</ion-button>      
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+
+
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

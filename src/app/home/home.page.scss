@@ -1,0 +1,52 @@
+/* Header */
+ion-header {
+  background: #EF540E;
+}
+
+ion-header img{
+  width: 200px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+
+ion-card {
+  transition: all 0.3s ease;
+}
+
+ion-card:hover {
+  transform: scale(1.03);
+  z-index: 1;
+  cursor: pointer;
+}
+
+ion-card ion-card-title > span {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 7px;
+  background-color: #fff;
+}
+
+ion-card-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+ion-card-content ion-card-title{
+  font-size: 2.5em;
+}
+
+span.color-preview {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+ion-row.card-footer ion-card-subtitle{
+  text-align: right;
+  padding: 15px;
+  width: 100%;
+}
