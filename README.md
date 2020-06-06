@@ -16,7 +16,7 @@ URL la PWA funcionando: https://multiplica-prueba-colores.web.app/
 
 ## Instalacion
 
-Dentro de la carpeta **apiColorsClient**, ejecuta:
+Dentro de la carpeta que contiene **package.json**, debes seguir los siguientes pasos:
 
 Para instalar las dependencias, debes tener instalado NPM o algún otro como Yarn.
 ```sh
