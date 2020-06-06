@@ -22,7 +22,7 @@
       <ion-col size="12" size-sm="4" *ngFor="let color of colorList">
         <div>
           
-          <ion-card class="ion-no-padding">
+          <ion-card (click)="copyColor(color.color, color.name)" class="ion-no-padding">
             <ion-card-header style="background-color:{{color.color}};">
               <ion-card-title>
                 <span>{{color.year}}</span>

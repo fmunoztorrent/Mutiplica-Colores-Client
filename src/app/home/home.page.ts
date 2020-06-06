@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ColorsService } from '../services/colors.service';
 import { Platform } from '@ionic/angular';
+import { Clipboard } from '@angular/cdk/clipboard';
+import { AlertController } from '@ionic/angular';
 
 /** Pagination */
 import { Subject } from 'rxjs';
@@ -25,6 +27,8 @@ export class HomePage {
     
     private colorSerivce:ColorsService,
     private platform: Platform,
+    private clipboard: Clipboard,
+    public alertController: AlertController, 
 
     ) {
 
@@ -75,9 +79,16 @@ export class HomePage {
 
   }
 
+  copyColor(color, name){
+    this.clipboard.copy(color);
+    this.alertController.create({
+      header: 'Color copiado',
+      message: `El color <strong>${color}</strong>, (${name}) fue copiado al portapapeles.`,
+      buttons: ['Ok']
+    }).then(alert=>{
+      alert.present();
+    });   
 
-  copyColor(color){
-    console.log({color});
   }
 
   updateColorList(colors){
